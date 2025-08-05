@@ -1,0 +1,89 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      '605a09416a5ee65c2b976c43e2fb9233' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"modalConsole","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"if ($modx->context->key != \'mgr\' || !$modx->getOption(\'modalconsole_enable\', null, true)) return;\\n\\nswitch ($modx->event->name) {\\n    case \'OnManagerPageBeforeRender\':\\n        $assetsUrl = $modx->getOption(\'modalconsole_assets_url\', null, $modx->getOption(\'assets_url\') . \'components\\/modalconsole\\/\');\\n        if ($modx->hasPermission(\'console\')) {\\n            $modx->controller->addLexiconTopic(\'modalconsole:default\');\\n            $css = $modx->getOption(\'modalconsole_cssFile\', null, $assetsUrl.\'css\\/mgr\\/modalconsole.css\');\\n            if ($css) $modx->controller->addCss($css);\\n            $js = $modx->getOption(\'modalconsole_jsFile\', null, $assetsUrl.\'js\\/mgr\\/modalconsole.js\');\\n            if ($js) $modx->controller->addJavascript($js);\\n\\n\\n            $config = array(\\n                \'connectorUrl\' => $assetsUrl.\'connector.php\',\\n                \'limit\' => $modx->getOption(\'modalconsole_history_limit\', null, 20),\\n            );\\n            $_html = \\"<script>modalConsole.config = {$modx->toJSON($config)} <\\/script>\\";\\n            $modx->controller->addHtml($_html);\\n        }\\n        break;\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/modalconsole\\/elements\\/plugins\\/plugin.modalconsole.php","content":"if ($modx->context->key != \'mgr\' || !$modx->getOption(\'modalconsole_enable\', null, true)) return;\\n\\nswitch ($modx->event->name) {\\n    case \'OnManagerPageBeforeRender\':\\n        $assetsUrl = $modx->getOption(\'modalconsole_assets_url\', null, $modx->getOption(\'assets_url\') . \'components\\/modalconsole\\/\');\\n        if ($modx->hasPermission(\'console\')) {\\n            $modx->controller->addLexiconTopic(\'modalconsole:default\');\\n            $css = $modx->getOption(\'modalconsole_cssFile\', null, $assetsUrl.\'css\\/mgr\\/modalconsole.css\');\\n            if ($css) $modx->controller->addCss($css);\\n            $js = $modx->getOption(\'modalconsole_jsFile\', null, $assetsUrl.\'js\\/mgr\\/modalconsole.js\');\\n            if ($js) $modx->controller->addJavascript($js);\\n\\n\\n            $config = array(\\n                \'connectorUrl\' => $assetsUrl.\'connector.php\',\\n                \'limit\' => $modx->getOption(\'modalconsole_history_limit\', null, 20),\\n            );\\n            $_html = \\"<script>modalConsole.config = {$modx->toJSON($config)} <\\/script>\\";\\n            $modx->controller->addHtml($_html);\\n        }\\n        break;\\n}"}',
+        'guid' => '93539afa0e3c3b96df6a0afa22b2d2dc',
+        'native_key' => NULL,
+        'signature' => '9ea3b89964462d147a3e89fba1deed58',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '5c653a8f3d40bdac6505f7df53409449' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnManagerPageBeforeRender","priority":0,"propertyset":0}',
+              'guid' => '259d7160ba87ef91b083a48c150b4f18',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnManagerPageBeforeRender',
+              ),
+              'signature' => 'c235bfb2585515f544f55d19981da173',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'modalconsole',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"modalconsole-1.1.2-beta\\/modCategory\\/46c899f554d7329b0f3e8cd8a0846370\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"modalconsole"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"modalconsole-1.1.2-beta\\/modCategory\\/46c899f554d7329b0f3e8cd8a0846370\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"modalconsole"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '45cd0cb6c462cfcefa3fc316f2c88916',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '46c899f554d7329b0f3e8cd8a0846370',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"modalConsole","rank":0}',
+);

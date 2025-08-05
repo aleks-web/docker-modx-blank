@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'modalconsole',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a0ab13637ce71db29488ac27b5f3b162',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '7c0767502d8af5ee7b44eeeb46138bc3',
+  'native_key' => 'modalconsole_enable',
+  'object' => '{"key":"modalconsole_enable","value":true,"xtype":"combo-boolean","namespace":"modalconsole","area":"modalconsole_main","editedon":null}',
+);

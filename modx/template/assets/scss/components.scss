@@ -1,0 +1,71 @@
+.agree {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0;
+    
+    .agree-click {
+        cursor: pointer;
+    }
+    
+    a {
+        text-decoration: none;
+        color: var(--clr-main);
+        transition: .2s all;
+        
+        &:hover {
+            color: var(--clr-main-hover);
+        }
+    }
+    
+    &:has(input[class="error"]) {
+        padding: 10px;
+        background-color: #fff4f4;
+    }
+    
+    &.active {
+        .agree__checkbox {
+            background-color: var(--clr-main);
+            border-color: var(--clr-main);
+            
+            svg {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    
+    input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: -1;
+    }
+    
+    &__checkbox {
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        border: 1px solid #79939C;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .2s all;
+        
+        svg {
+            opacity: 0;
+            visibility: hidden;
+            fill: white;
+            transition: .2s all;
+        }
+    }
+    
+    &__desc {
+        font-size: 14px;
+    }
+    
+}

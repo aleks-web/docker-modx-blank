@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'backupmodx',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '07281a03f79107c3dfec1e1113bee625',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'd5370b08a2786a0f82570da686897579',
+  'native_key' => 'backupmodx.groups',
+  'object' => '{"key":"backupmodx.groups","value":"Administrator","xtype":"textfield","namespace":"backupmodx","area":"system","editedon":null}',
+);

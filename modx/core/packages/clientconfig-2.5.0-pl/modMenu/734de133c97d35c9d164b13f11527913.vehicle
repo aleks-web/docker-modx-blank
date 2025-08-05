@@ -1,0 +1,17 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'unique_key' => 'text',
+  'related_objects' => false,
+  'namespace' => 'clientconfig',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '5a8dbe7b5b069ce0c9983d72785183f0',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => '734de133c97d35c9d164b13f11527913',
+  'native_key' => 'clientconfig',
+  'object' => '{"text":"clientconfig","parent":"components","action":"home","description":"clientconfig.desc","icon":"<i class=\\"icon icon-wrench\\"><\\/i>","menuindex":0,"params":"","handler":"","permissions":"","namespace":"clientconfig"}',
+);

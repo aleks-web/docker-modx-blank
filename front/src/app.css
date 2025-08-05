@@ -1,0 +1,156 @@
+@import 'tailwindcss';
+
+@theme {
+    --breakpoint-*: initial;
+    --breakpoint-s: 320px;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1536px;
+    --breakpoint-2xl: 1836px;
+}
+
+@plugin 'tailwind-scrollbar';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+    --font-display: "Roboto", sans-serif;
+
+    --clr-text: #6F6F6F;
+    --clr-error: #F5222D;
+    --clr-success: #3FC580;
+    --clr-pause: #FFC300;
+    --clr-bg: #f2f6ff;
+    --clr-main: #1450D0;
+    --clr-2: #5BA1FF;
+    --clr-el-bg: white;
+
+    /*
+        Dark variables
+    */
+    --clr-bg-dark: #102A43;
+    /* --clr-text-dark: white; */
+    --clr-text-dark: #e2e2e2;
+    --clr-el-bg-dark: #334E68;
+
+    /*
+        Layout variables
+    */
+    --gap: calc(var(--spacing) * 2);
+    --header-height: 100px;
+    --mobile-menu-height: calc( 100svh - var(--header-height) - calc(var(--gap) * 3) );
+    --aside-height: calc( 100svh - var(--header-height) - calc(var(--gap) * 3) );
+}
+
+@theme {
+  --color-primary-50: #eef7ff;
+  --color-primary-100: #daecff;
+  --color-primary-200: #bcdfff;
+  --color-primary-300: #8fcbff;
+  --color-primary-400: #5aadff;
+  --color-primary-500: #338cfe;
+  --color-primary-600: #1d6cf3;
+  --color-primary-700: #1450d0;
+  --color-primary-800: #1846b5;
+  --color-primary-900: #1a3f8e;
+
+  --color-secondary-50: #eef6ff;
+  --color-secondary-100: #dae9ff;
+  --color-secondary-200: #bddaff;
+  --color-secondary-300: #90c3ff;
+  --color-secondary-400: #5ba1ff;
+  --color-secondary-500: #357dfc;
+  --color-secondary-600: #1f5df1;
+  --color-secondary-700: #1747de;
+  --color-secondary-800: #193bb4;
+  --color-secondary-900: #1a368e;
+}
+
+
+svg * {
+    @apply text-inherit;
+}
+.dark\:bg-default {@apply dark:bg-(--clr-el-bg-dark)}
+.dark\:bg-default\! {@apply dark:bg-(--clr-el-bg-dark)!}
+.dark\:text-default {@apply dark:text-(--clr-text-dark)}
+.dark\:text-default\! {@apply dark:text-(--clr-text-dark)!}
+
+.btn {
+    @apply text-white bg-[var(--clr-main)] cursor-pointer py-2 px-3 rounded-lg text-center max-w-max text-[13px] flex gap-2 s:text-[14px] sm:text-[16px] transition-all hover:bg-[var(--clr-2)];
+}
+.rounded-btn {
+    @apply
+    rounded-full px-4 h-[33px] text-[13px] font-bold flex gap-2 items-center leading-0 cursor-pointer transition-all bg-[#E7EAEE] text-[#5D5A62] hover:bg-[var(--clr-2)] hover:text-white box-content
+    s:text-[14px] s:h-[35px]
+    sm:text-[16px] sm:px-5 sm:h-[40px]
+    lg:text-[18px] lg:px-6 lg:h-[50px]
+    disabled:pointer-events-none
+}
+
+.page-title {
+    @apply
+    block font-bold text-[16px] leading-4 text-[var(--clr-main)] s:text-[18px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[32px] dark:text-white
+}
+
+.ui-label {
+    @apply
+    px-3 pb-1 left-[20px] leading-[normal] text-[11px]
+    s:text-[12px]
+    sm:text-[12px]
+    md:text-[13px]
+    lg:text-[14px]
+    italic
+    group-[.error]/input:text-[var(--clr-error)]
+    group-[.success]/input:text-[var(--clr-success)]
+    group-[.error]/select:text-[var(--clr-error)]
+    group-[.success]/select:text-[var(--clr-success)]
+
+    dark:text-(--clr-text-dark)
+    dark:group-[.disabled]/select:opacity-50
+    dark:group-[.disabled]/input:opacity-50
+}
+
+
+/* --breakpoint-s */
+@media (min-width: 320px) {
+    :root {
+        --gap: calc(var(--spacing) * 3);
+    }
+}
+
+/* --breakpoint-sm */
+@media (min-width: 576px) {
+    :root {
+        --header-height: 60px;
+        --gap: calc(var(--spacing) * 4);
+    }
+}
+
+body {
+    background-color: var(--clr-bg);
+    font-family: var(--font-display);
+    box-sizing: border-box;
+    color: var(--clr-text);
+}
+
+
+/*
+    Переопределение полосы прокрутки
+*/
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--clr-main);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--clr-2);
+}

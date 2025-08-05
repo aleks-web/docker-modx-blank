@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'collections',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '555ef0a5453c3da1b7dd35a64dbb7668',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '26245c5f14ee0ad7cab3e7bad2f05eef',
+  'native_key' => 'mgr_tree_icon_selectioncontainer',
+  'object' => '{"key":"mgr_tree_icon_selectioncontainer","value":"selectioncontainer","xtype":"textfield","namespace":"collections","area":"manager","editedon":null}',
+);

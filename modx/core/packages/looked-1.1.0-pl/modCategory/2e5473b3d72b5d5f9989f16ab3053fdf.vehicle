@@ -1,0 +1,101 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Chunks' => 
+    array (
+      'eaed197d2be54002802f28f62bb220a4' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modChunk',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"lookedOuterTpl","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"<div class=\\"looked-wrap\\">\\n    <button type=\\"button\\" class=\\"close looked-remove\\" data-looked=\\"looked\\/remove\\/all\\" title=\\"[[%looked_remove_all_lokeed]]\\">x<\\/button>\\n    <h3 class=\\"looked-title\\"><span class=\\"circle\\"><\\/span> [[%looked_title]] (<span class=\\"looked-count\\">[[+looked.count]]<\\/span>)<\\/h3>\\n    \\n    [[+output]]\\n    \\n<\\/div>","locked":0,"properties":null,"static":0,"static_file":"core\\/components\\/looked\\/elements\\/chunks\\/chunk.lookedoutertpl.tpl","content":"<div class=\\"looked-wrap\\">\\n    <button type=\\"button\\" class=\\"close looked-remove\\" data-looked=\\"looked\\/remove\\/all\\" title=\\"[[%looked_remove_all_lokeed]]\\">x<\\/button>\\n    <h3 class=\\"looked-title\\"><span class=\\"circle\\"><\\/span> [[%looked_title]] (<span class=\\"looked-count\\">[[+looked.count]]<\\/span>)<\\/h3>\\n    \\n    [[+output]]\\n    \\n<\\/div>"}',
+        'guid' => 'c0958cd71ca5de07539b22a72ad5af24',
+        'native_key' => 0,
+        'signature' => 'c8d99e728d59053bf7fc15fba0bb11df',
+      ),
+      '1080c8eb744f0d2cc5ed8bb76f0e6a28' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modChunk',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"lookedTpl","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"<div class=\\"looked-ms2-product clearfix looked-[[+id]]\\">\\n    <button type=\\"button\\" class=\\"close looked-remove\\" data-id=\\"[[+id]]\\" data-looked=\\"looked\\/remove\\" title=\\"[[%looked_remove_lokeed]]\\">x<\\/button>\\n    <div class=\\"col-xs-2 col-sm-2\\"><img src=\\"[[+24x92]]\\" width=\\"24\\" height=\\"92\\" \\/><\\/div>\\n    <div class=\\"col-xs-10 col-sm-10\\">\\n        \\n        <form method=\\"post\\" class=\\"ms2_form\\">\\n            <h4 class=\\"title-product\\"><a href=\\"[[+uri]]\\"><strong>[[+pagetitle]]<\\/strong><\\/a><\\/h4>\\n            <span class=\\"price\\">\\n                <span class=\\"price-int\\"><strong>[[+price]]<\\/strong><\\/span> <strong>[[%ms2_frontend_currency]]<\\/strong>\\n            <\\/span>\\n            <br \\/>\\n            \\n            <button class=\\"btn btn-default\\" type=\\"submit\\" name=\\"ms2_action\\" value=\\"cart\\/add\\">[[%ms2_frontend_add_to_cart]]<\\/button>\\n\\n            <input type=\\"hidden\\" name=\\"id\\" value=\\"[[+id]]\\">\\n            <input type=\\"hidden\\" name=\\"count\\" value=\\"1\\">\\n            <input type=\\"hidden\\" name=\\"options\\" value=\\"[]\\">\\n        <\\/form>\\n\\n    <\\/div>\\n<\\/div>\\n<br \\/>\\n","locked":0,"properties":null,"static":0,"static_file":"core\\/components\\/looked\\/elements\\/chunks\\/chunk.lookedtpl.tpl","content":"<div class=\\"looked-ms2-product clearfix looked-[[+id]]\\">\\n    <button type=\\"button\\" class=\\"close looked-remove\\" data-id=\\"[[+id]]\\" data-looked=\\"looked\\/remove\\" title=\\"[[%looked_remove_lokeed]]\\">x<\\/button>\\n    <div class=\\"col-xs-2 col-sm-2\\"><img src=\\"[[+24x92]]\\" width=\\"24\\" height=\\"92\\" \\/><\\/div>\\n    <div class=\\"col-xs-10 col-sm-10\\">\\n        \\n        <form method=\\"post\\" class=\\"ms2_form\\">\\n            <h4 class=\\"title-product\\"><a href=\\"[[+uri]]\\"><strong>[[+pagetitle]]<\\/strong><\\/a><\\/h4>\\n            <span class=\\"price\\">\\n                <span class=\\"price-int\\"><strong>[[+price]]<\\/strong><\\/span> <strong>[[%ms2_frontend_currency]]<\\/strong>\\n            <\\/span>\\n            <br \\/>\\n            \\n            <button class=\\"btn btn-default\\" type=\\"submit\\" name=\\"ms2_action\\" value=\\"cart\\/add\\">[[%ms2_frontend_add_to_cart]]<\\/button>\\n\\n            <input type=\\"hidden\\" name=\\"id\\" value=\\"[[+id]]\\">\\n            <input type=\\"hidden\\" name=\\"count\\" value=\\"1\\">\\n            <input type=\\"hidden\\" name=\\"options\\" value=\\"[]\\">\\n        <\\/form>\\n\\n    <\\/div>\\n<\\/div>\\n<br \\/>\\n"}',
+        'guid' => '372f93113e7a47e32a680c8c214e42f0',
+        'native_key' => 0,
+        'signature' => 'f642d2bc7e42e69683d6ced73a5e1a23',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      'c7b803eb8a73276ed82de16bc382e5a8' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"looked","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/** @var modX $modx *\\/\\n\\/** @var array $scriptProperties *\\/\\n\\/** @var Looked $Looked *\\/\\n\\nif (!$Looked = $modx->getService(\'looked\', \'Looked\', $modx->getOption(\'looked_core_path\',\\n        null, $modx->getOption(\'core_path\') . \'components\\/looked\\/\') . \'model\\/looked\\/\',\\n    $scriptProperties)\\n) {\\n\\treturn \'\';\\n}\\n\\n$output = \'\';\\n\\nif (isset($_SESSION[\'looked\']) && !empty($_SESSION[\'looked\'])) {\\n\\t$id = $modx->resource->get(\'id\');\\n\\t$arrIds = $_SESSION[\'looked\'];\\n\\t$count = count($arrIds);\\n    if(($key = array_search($id, $arrIds)) !== false){\\n\\t\\tunset($arrIds[$key]);\\n        $count = $count - 1;\\n\\t}\\n    $modx->toPlaceholder(\'count\', $count, \'looked\');\\n    $ids = implode(\',\', $arrIds);\\n} else {\\n\\treturn \'\';\\n}\\nif (empty($ids))\\n    return \'\';\\n\\nif ($scriptProperties[\'ids\'] == true) {\\n\\t$output = $ids;\\n} else {\\n\\tif ($out = $Looked->process($scriptProperties, $ids)) {\\n        $output = $Looked->getChunk($scriptProperties[\'tplOuter\'], array(\'output\' => $out));\\n    }\\n}\\n\\nif (!empty($frontendJs)) {\\n    $modx->regClientScript(MODX_ASSETS_URL . $scriptProperties[\'frontendJs\']);\\n}\\n$modx->regClientHTMLBlock(\'<script>Looked.initialize({ \\n    \\"actionUrl\\":\\"\' . $Looked->config[\'actionUrl\'] . \'\\",\\n    \\"id\\":\\"\' . $modx->resource->id . \'\\"});\\n<\\/script>\');\\n\\nreturn $output;","locked":0,"properties":"a:9:{s:3:\\"tpl\\";a:7:{s:4:\\"name\\";s:3:\\"tpl\\";s:4:\\"desc\\";s:15:\\"looked_prop_tpl\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:9:\\"lookedTpl\\";s:7:\\"lexicon\\";s:17:\\"looked:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:8:\\"tplOuter\\";a:7:{s:4:\\"name\\";s:8:\\"tplOuter\\";s:4:\\"desc\\";s:20:\\"looked_prop_tplOuter\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:14:\\"lookedOuterTpl\\";s:7:\\"lexicon\\";s:17:\\"looked:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:7:\\"snippet\\";a:7:{s:4:\\"name\\";s:7:\\"snippet\\";s:4:\\"desc\\";s:19:\\"looked_prop_snippet\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:10:\\"msProducts\\";s:7:\\"lexicon\\";s:17:\\"looked:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:5:\\"limit\\";a:7:{s:4:\\"name\\";s:5:\\"limit\\";s:4:\\"desc\\";s:17:\\"looked_prop_limit\\";s:4:\\"type\\";s:11:\\"numberfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";i:5;s:7:\\"lexicon\\";s:17:\\"looked:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:3:\\"ids\\";a:7:{s:4:\\"name\\";s:3:\\"ids\\";s:4:\\"desc\\";s:15:\\"looked_prop_ids\\";s:4:\\"type\\";s:13:\\"combo-boolean\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";b:0;s:7:\\"lexicon\\";s:17:\\"looked:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:7:\\"parents\\";a:7:{s:4:\\"name\\";s:7:\\"parents\\";s:4:\\"desc\\";s:19:\\"looked_prop_parents\\";s:4:\\"type\\";s:11:\\"numberfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";i:0;s:7:\\"lexicon\\";s:17:\\"looked:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:7:\\"sortdir\\";a:7:{s:4:\\"name\\";s:7:\\"sortdir\\";s:4:\\"desc\\";s:19:\\"looked_prop_sortdir\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:17:\\"looked:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:6:\\"sortby\\";a:7:{s:4:\\"name\\";s:6:\\"sortby\\";s:4:\\"desc\\";s:18:\\"looked_prop_sortby\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:17:\\"looked:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:10:\\"frontendJs\\";a:7:{s:4:\\"name\\";s:10:\\"frontendJs\\";s:4:\\"desc\\";s:22:\\"looked_prop_frontendJs\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:34:\\"components\\/looked\\/js\\/web\\/looked.js\\";s:7:\\"lexicon\\";s:17:\\"looked:properties\\";s:4:\\"area\\";s:0:\\"\\";}}","moduleguid":"","static":0,"static_file":"core\\/components\\/looked\\/elements\\/snippets\\/snippet.looked.php","content":"\\/** @var modX $modx *\\/\\n\\/** @var array $scriptProperties *\\/\\n\\/** @var Looked $Looked *\\/\\n\\nif (!$Looked = $modx->getService(\'looked\', \'Looked\', $modx->getOption(\'looked_core_path\',\\n        null, $modx->getOption(\'core_path\') . \'components\\/looked\\/\') . \'model\\/looked\\/\',\\n    $scriptProperties)\\n) {\\n\\treturn \'\';\\n}\\n\\n$output = \'\';\\n\\nif (isset($_SESSION[\'looked\']) && !empty($_SESSION[\'looked\'])) {\\n\\t$id = $modx->resource->get(\'id\');\\n\\t$arrIds = $_SESSION[\'looked\'];\\n\\t$count = count($arrIds);\\n    if(($key = array_search($id, $arrIds)) !== false){\\n\\t\\tunset($arrIds[$key]);\\n        $count = $count - 1;\\n\\t}\\n    $modx->toPlaceholder(\'count\', $count, \'looked\');\\n    $ids = implode(\',\', $arrIds);\\n} else {\\n\\treturn \'\';\\n}\\nif (empty($ids))\\n    return \'\';\\n\\nif ($scriptProperties[\'ids\'] == true) {\\n\\t$output = $ids;\\n} else {\\n\\tif ($out = $Looked->process($scriptProperties, $ids)) {\\n        $output = $Looked->getChunk($scriptProperties[\'tplOuter\'], array(\'output\' => $out));\\n    }\\n}\\n\\nif (!empty($frontendJs)) {\\n    $modx->regClientScript(MODX_ASSETS_URL . $scriptProperties[\'frontendJs\']);\\n}\\n$modx->regClientHTMLBlock(\'<script>Looked.initialize({ \\n    \\"actionUrl\\":\\"\' . $Looked->config[\'actionUrl\'] . \'\\",\\n    \\"id\\":\\"\' . $modx->resource->id . \'\\"});\\n<\\/script>\');\\n\\nreturn $output;"}',
+        'guid' => 'c4471c228493926e85ba81897040be9b',
+        'native_key' => 0,
+        'signature' => '3826133c211ffd84275e934d0de88a51',
+      ),
+      'e530584cd44859c69bc14daaff1bc537' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"addLooked","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/** @var modX $modx *\\/\\n\\/** @var array $scriptProperties *\\/\\n\\/** @var Looked $Looked *\\/\\n\\nif (!$Looked = $modx->getService(\'looked\', \'Looked\', $modx->getOption(\'looked_core_path\',\\n        null, $modx->getOption(\'core_path\') . \'components\\/looked\\/\') . \'model\\/looked\\/\',\\n    $scriptProperties)\\n) {\\n    return \'\';\\n}\\n\\n$templates = $modx->getOption(\'templates\', $scriptProperties, \'\');\\n$limit = $modx->getOption(\'limit\', $scriptProperties, \'5\');\\n\\n$id = $modx->resource->id;\\n$template = $modx->resource->template;\\n$arrTemplate = !empty($templates)\\n\\t? explode(\',\', str_replace(\' \', \'\', $templates))\\n\\t: array();\\n\\nif (empty($arrTemplate) || in_array($template, $arrTemplate)) {\\n\\tif (!isset($_SESSION[\'looked\'])) {\\n\\t\\t$_SESSION[\'looked\'] = array();\\n\\t\\t$_SESSION[\'looked\'][] = $id;\\n\\t} else {\\n\\t\\tif (in_array($id, $_SESSION[\'looked\']) === false) {\\n\\t\\t\\tarray_unshift($_SESSION[\'looked\'], $id);\\n\\t\\t}\\n\\t\\tif (count($_SESSION[\'looked\']) > $limit) {\\n\\t\\t\\tarray_pop($_SESSION[\'looked\']);\\n\\t\\t}\\n\\t}\\n\\treturn;\\n}\\nreturn;","locked":0,"properties":"a:2:{s:9:\\"templates\\";a:7:{s:4:\\"name\\";s:9:\\"templates\\";s:4:\\"desc\\";s:21:\\"looked_prop_templates\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:17:\\"looked:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:5:\\"limit\\";a:7:{s:4:\\"name\\";s:5:\\"limit\\";s:4:\\"desc\\";s:17:\\"looked_prop_limit\\";s:4:\\"type\\";s:11:\\"numberfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";i:5;s:7:\\"lexicon\\";s:17:\\"looked:properties\\";s:4:\\"area\\";s:0:\\"\\";}}","moduleguid":"","static":0,"static_file":"core\\/components\\/looked\\/elements\\/snippets\\/snippet.addlooked.php","content":"\\/** @var modX $modx *\\/\\n\\/** @var array $scriptProperties *\\/\\n\\/** @var Looked $Looked *\\/\\n\\nif (!$Looked = $modx->getService(\'looked\', \'Looked\', $modx->getOption(\'looked_core_path\',\\n        null, $modx->getOption(\'core_path\') . \'components\\/looked\\/\') . \'model\\/looked\\/\',\\n    $scriptProperties)\\n) {\\n    return \'\';\\n}\\n\\n$templates = $modx->getOption(\'templates\', $scriptProperties, \'\');\\n$limit = $modx->getOption(\'limit\', $scriptProperties, \'5\');\\n\\n$id = $modx->resource->id;\\n$template = $modx->resource->template;\\n$arrTemplate = !empty($templates)\\n\\t? explode(\',\', str_replace(\' \', \'\', $templates))\\n\\t: array();\\n\\nif (empty($arrTemplate) || in_array($template, $arrTemplate)) {\\n\\tif (!isset($_SESSION[\'looked\'])) {\\n\\t\\t$_SESSION[\'looked\'] = array();\\n\\t\\t$_SESSION[\'looked\'][] = $id;\\n\\t} else {\\n\\t\\tif (in_array($id, $_SESSION[\'looked\']) === false) {\\n\\t\\t\\tarray_unshift($_SESSION[\'looked\'], $id);\\n\\t\\t}\\n\\t\\tif (count($_SESSION[\'looked\']) > $limit) {\\n\\t\\t\\tarray_pop($_SESSION[\'looked\']);\\n\\t\\t}\\n\\t}\\n\\treturn;\\n}\\nreturn;"}',
+        'guid' => 'e247eabd22cf748274d154f9e52925a0',
+        'native_key' => 0,
+        'signature' => '8896a17d1144803d2d699ba9f37faa41',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'looked',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"looked-1.1.0-pl\\/modCategory\\/2e5473b3d72b5d5f9989f16ab3053fdf\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"looked"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"looked-1.1.0-pl\\/modCategory\\/2e5473b3d72b5d5f9989f16ab3053fdf\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"looked"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"looked-1.1.0-pl\\/modCategory\\/2e5473b3d72b5d5f9989f16ab3053fdf.resolve.chunks.resolver","type":"php","name":"resolve.chunks"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '6f91e019139aa2f735dc165e1e88220e',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '2e5473b3d72b5d5f9989f16ab3053fdf',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"Looked","rank":0}',
+);

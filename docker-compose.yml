@@ -1,0 +1,61 @@
+networks:
+    docker-modx-network:
+        driver: bridge
+        name: docker_modx_network
+
+services:
+    modx_nginx:
+        container_name: modx_nginx
+        build:
+            context: ./
+            dockerfile: docker/nginx/Dockerfile
+        volumes:
+            - ./modx:/var/www/modx
+            - ./docker/nginx/conf.d:/etc/nginx/conf.d
+        ports:
+            - "80:80"
+        expose:
+            - 80
+        networks:
+            - docker-modx-network
+        depends_on:
+            site: { condition: service_started }
+
+    site:
+        container_name: site
+        build:
+            context: ./
+            dockerfile: ./docker/php-fpm/Dockerfile
+        networks:
+            - docker-modx-network
+        volumes:
+            - ./modx:/var/www/modx
+
+    db_modx:
+        image: mysql:5.7
+        restart: always
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: 'modx_pass'
+            MYSQL_DATABASE: 'modx'
+            MYSQL_PASSWORD: 'modx_pass'
+        networks:
+            - docker-modx-network
+        volumes:
+            - ./docker/mysql/volume:/var/lib/mysql
+
+    phpmyadmin:
+        depends_on:
+            - db_modx
+        image: phpmyadmin
+        restart: always
+        ports:
+            - "8090:80"
+        environment:
+            PMA_HOST: db_modx
+            PMA_USER: root
+            PMA_PASSWORD: 'modx_pass'
+            PMA_PORT: 3306
+        networks:
+            - docker-modx-network

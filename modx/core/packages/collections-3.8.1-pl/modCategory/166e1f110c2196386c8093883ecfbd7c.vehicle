@@ -1,0 +1,370 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      'a16865cb9583d5c6fb11492d556c9acf' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"getSelections","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/**\\n * getSelections\\n *\\n * DESCRIPTION\\n *\\n * This snippet is a helper for getResources call.\\n * It will allows you to select all linked resources under specific Selection with a usage of getResources snippet.\\n * Returns distinct list of linked Resources for given Selections\\n *\\n * getResources are required\\n *\\n * PROPERTIES:\\n *\\n * &sortdir                 string  optional    Direction of sorting by linked resource\'s menuindex. Default: ASC\\n * &selections              string  optional    Comma separated list of Selection IDs for which should be retrieved linked resources. Default: empty string\\n * &getResourcesSnippet     string  optional    Name of getResources snippet. Default: getResources\\n *\\n * USAGE:\\n *\\n * [[getSelections? &selections=`1` &tpl=`rowTpl`]]\\n * [[getSelections? &selections=`1` &tpl=`rowTpl` &sortby=`RAND()`]]\\n *\\n *\\/\\n\\n$collections = $modx->getService(\'collections\',\'Collections\',$modx->getOption(\'collections.core_path\',null,$modx->getOption(\'core_path\').\'components\\/collections\\/\').\'model\\/collections\\/\',$scriptProperties);\\nif (!($collections instanceof Collections)) return \'\';\\n\\n$getResourcesSnippet = $modx->getOption(\'getResourcesSnippet\', $scriptProperties, \'getResources\');\\n\\n$getResourcesExists = $modx->getCount(\'modSnippet\', array(\'name\' => $getResourcesSnippet));\\nif ($getResourcesExists == 0) return \'getResources not found\';\\n\\n$sortDir = strtolower($modx->getOption(\'sortdir\', $scriptProperties, \'asc\'));\\n$selections = $modx->getOption(\'selections\', $scriptProperties, \'\');\\n$sortBy = $modx->getOption(\'sortby\', $scriptProperties, \'\');\\n$excludeToPlaceholder = $modx->getOption(\'excludeToPlaceholder\', $scriptProperties, \'\');\\n\\n$selections = $modx->collections->explodeAndClean($selections);\\n\\nif ($sortDir != \'asc\') {\\n    $sortDir = \'desc\';\\n}\\n\\n$linkedResourcesQuery = $modx->newQuery(\'CollectionSelection\');\\n\\nif (!empty($selections)) {\\n    $linkedResourcesQuery->where(array(\\n        \'collection:IN\' => $selections\\n    ));\\n}\\n\\nif ($sortBy == \'\') {\\n    $linkedResourcesQuery->sortby(\'menuindex\', $sortDir);\\n}\\n\\n$linkedResourcesQuery->select(array(\\n    \'resource\' => \'DISTINCT(resource)\',\\n    \'menuindex\' => \'menuindex\'\\n));\\n\\n$linkedResourcesQuery->prepare();\\n\\n$linkedResourcesQuery->stmt->execute();\\n\\n$linkedResources = $linkedResourcesQuery->stmt->fetchAll(PDO::FETCH_COLUMN, 0);\\n\\nif (!empty($excludeToPlaceholder)) {\\n    $excludeResources = array();\\n    foreach($linkedResources as $res) {\\n        $excludeResources[] = \'-\' . $res;\\n    }\\n    $excludeResources = implode(\',\', $excludeResources);\\n    $modx->setPlaceholder($excludeToPlaceholder, $excludeResources);\\n}\\n\\n$linkedResources = implode(\',\', $linkedResources);\\n\\n$properties = $scriptProperties;\\nunset($properties[\'selections\']);\\n\\n$properties[\'parents\'] = ($properties[\'getResourcesSnippet\'] == \'pdoResources\') ? 0 : -1;\\n\\nif (empty($linkedResources)) {\\n    $properties[\'where\'] = \'2=1\';\\n} else {\\n    $properties[\'resources\'] = $linkedResources;\\n\\n    if ($sortBy == \'\') {\\n        $properties[\'sortby\'] = \'FIELD(modResource.id, \' . $linkedResources . \' )\';\\n        $properties[\'sortdir\'] = \'asc\';\\n    }\\n};\\n\\nreturn $modx->runSnippet($getResourcesSnippet, $properties);","locked":0,"properties":"a:0:{}","moduleguid":"","static":0,"static_file":"","content":"\\/**\\n * getSelections\\n *\\n * DESCRIPTION\\n *\\n * This snippet is a helper for getResources call.\\n * It will allows you to select all linked resources under specific Selection with a usage of getResources snippet.\\n * Returns distinct list of linked Resources for given Selections\\n *\\n * getResources are required\\n *\\n * PROPERTIES:\\n *\\n * &sortdir                 string  optional    Direction of sorting by linked resource\'s menuindex. Default: ASC\\n * &selections              string  optional    Comma separated list of Selection IDs for which should be retrieved linked resources. Default: empty string\\n * &getResourcesSnippet     string  optional    Name of getResources snippet. Default: getResources\\n *\\n * USAGE:\\n *\\n * [[getSelections? &selections=`1` &tpl=`rowTpl`]]\\n * [[getSelections? &selections=`1` &tpl=`rowTpl` &sortby=`RAND()`]]\\n *\\n *\\/\\n\\n$collections = $modx->getService(\'collections\',\'Collections\',$modx->getOption(\'collections.core_path\',null,$modx->getOption(\'core_path\').\'components\\/collections\\/\').\'model\\/collections\\/\',$scriptProperties);\\nif (!($collections instanceof Collections)) return \'\';\\n\\n$getResourcesSnippet = $modx->getOption(\'getResourcesSnippet\', $scriptProperties, \'getResources\');\\n\\n$getResourcesExists = $modx->getCount(\'modSnippet\', array(\'name\' => $getResourcesSnippet));\\nif ($getResourcesExists == 0) return \'getResources not found\';\\n\\n$sortDir = strtolower($modx->getOption(\'sortdir\', $scriptProperties, \'asc\'));\\n$selections = $modx->getOption(\'selections\', $scriptProperties, \'\');\\n$sortBy = $modx->getOption(\'sortby\', $scriptProperties, \'\');\\n$excludeToPlaceholder = $modx->getOption(\'excludeToPlaceholder\', $scriptProperties, \'\');\\n\\n$selections = $modx->collections->explodeAndClean($selections);\\n\\nif ($sortDir != \'asc\') {\\n    $sortDir = \'desc\';\\n}\\n\\n$linkedResourcesQuery = $modx->newQuery(\'CollectionSelection\');\\n\\nif (!empty($selections)) {\\n    $linkedResourcesQuery->where(array(\\n        \'collection:IN\' => $selections\\n    ));\\n}\\n\\nif ($sortBy == \'\') {\\n    $linkedResourcesQuery->sortby(\'menuindex\', $sortDir);\\n}\\n\\n$linkedResourcesQuery->select(array(\\n    \'resource\' => \'DISTINCT(resource)\',\\n    \'menuindex\' => \'menuindex\'\\n));\\n\\n$linkedResourcesQuery->prepare();\\n\\n$linkedResourcesQuery->stmt->execute();\\n\\n$linkedResources = $linkedResourcesQuery->stmt->fetchAll(PDO::FETCH_COLUMN, 0);\\n\\nif (!empty($excludeToPlaceholder)) {\\n    $excludeResources = array();\\n    foreach($linkedResources as $res) {\\n        $excludeResources[] = \'-\' . $res;\\n    }\\n    $excludeResources = implode(\',\', $excludeResources);\\n    $modx->setPlaceholder($excludeToPlaceholder, $excludeResources);\\n}\\n\\n$linkedResources = implode(\',\', $linkedResources);\\n\\n$properties = $scriptProperties;\\nunset($properties[\'selections\']);\\n\\n$properties[\'parents\'] = ($properties[\'getResourcesSnippet\'] == \'pdoResources\') ? 0 : -1;\\n\\nif (empty($linkedResources)) {\\n    $properties[\'where\'] = \'2=1\';\\n} else {\\n    $properties[\'resources\'] = $linkedResources;\\n\\n    if ($sortBy == \'\') {\\n        $properties[\'sortby\'] = \'FIELD(modResource.id, \' . $linkedResources . \' )\';\\n        $properties[\'sortdir\'] = \'asc\';\\n    }\\n};\\n\\nreturn $modx->runSnippet($getResourcesSnippet, $properties);"}',
+        'guid' => '36ea0b64d073e131028cb82d8c2ced56',
+        'native_key' => NULL,
+        'signature' => '4616ee23d9bab1ccbb2eb05c855e7d15',
+      ),
+    ),
+    'Plugins' => 
+    array (
+      'c5a989220e2024fdbeff62a3bfb43d57' => 
+      array (
+        'unique_key' => 'name',
+        'preserve_keys' => false,
+        'update_object' => true,
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '715f1712cb80c71b66b6f910bcdb90f2' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnManagerPageInit","priority":0,"propertyset":0}',
+              'guid' => '3ad6ea2d0f07f9777da41a09c2b1a03c',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnManagerPageInit',
+              ),
+              'signature' => '024ba9c20cf255504a2d15d9f73be45a',
+            ),
+            '2e563d41a28c6e8594bba729e22ac2d5' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnBeforeDocFormSave","priority":0,"propertyset":0}',
+              'guid' => '2a0f90c113b605a7b07cb9eda048de8c',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnBeforeDocFormSave',
+              ),
+              'signature' => 'a9e7c01bc3423fae5906d90aad114ba6',
+            ),
+            '50d3dc61e51e1bfabc2ba1dbcbb86697' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnResourceBeforeSort","priority":0,"propertyset":0}',
+              'guid' => '9350112d4e31b61be63191f563ac5e07',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnResourceBeforeSort',
+              ),
+              'signature' => '1738d141774e5bfa8b4e4b255f2427a3',
+            ),
+            'ec32b937a86c5572b42f2a19feed903c' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnDocFormPrerender","priority":0,"propertyset":0}',
+              'guid' => '609a95b2965a50debd012249a9664fde',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnDocFormPrerender',
+              ),
+              'signature' => '1c6aa45ce53cc76ff313e08e1ab779af',
+            ),
+            '52d990f1167087dce8f5b35d9684e813' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnBeforeEmptyTrash","priority":0,"propertyset":0}',
+              'guid' => 'bb9114f4b57c9b642cde01b3fb87e773',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnBeforeEmptyTrash',
+              ),
+              'signature' => 'b1746d17d5f9ef3476d9296ecf184bcb',
+            ),
+            'a7a221a9c1387107b7258182bbde8005' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnDocFormRender","priority":0,"propertyset":0}',
+              'guid' => '0899a29a6c90a25b91d16dd8a2e56748',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnDocFormRender',
+              ),
+              'signature' => '0fcab99b2247f5c3726c669863689fed',
+            ),
+            'f2194fe2bab02774e182d59bacb601e5' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnManagerPageBeforeRender","priority":0,"propertyset":0}',
+              'guid' => '918cb2e960994369f3a80229918cc97c',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnManagerPageBeforeRender',
+              ),
+              'signature' => 'abf82707fec2534a28019a3b05c06697',
+            ),
+            '412712dbe4b37e88c93fcb8dce7b4ee4' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"FredOnBeforeGetResourceTree","priority":0,"propertyset":0}',
+              'guid' => 'ed5e3cffdb329ae68b21515911cf0da9',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'FredOnBeforeGetResourceTree',
+              ),
+              'signature' => '2af90c10ae820d587da3230114e3e371',
+            ),
+            'f65759856955a3a0487360d6611d500c' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"FredBeforeRender","priority":0,"propertyset":0}',
+              'guid' => 'bce80df603e3788cd5d59b90abc18355',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'FredBeforeRender',
+              ),
+              'signature' => 'd7eebd2f0f48c5d163d68c1bfa0f4090',
+            ),
+            '425c3194fe6b673e3403256c85e84e50' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnResourceDuplicate","priority":0,"propertyset":0}',
+              'guid' => '843a7626767f6f78ebc0ab6422eb7a2e',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnResourceDuplicate',
+              ),
+              'signature' => '1337ca9117729f5a1bce8c5ccbacb20f',
+            ),
+          ),
+        ),
+        'related_object_attributes' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'preserve_keys' => true,
+            'update_object' => false,
+            'unique_key' => 
+            array (
+              0 => 'pluginid',
+              1 => 'event',
+            ),
+          ),
+        ),
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"Collections","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/**\\n * Collections\\n *\\n * DESCRIPTION\\n *\\n * This plugin inject JS to handle proper working of close buttons in Resource\'s panel (OnDocFormPrerender)\\n * This plugin handles setting proper show_in_tree parameter (OnBeforeDocFormSave, OnResourceSort)\\n *\\n * @var modX $modx\\n * @var array $scriptProperties\\n *\\/\\n$corePath = $modx->getOption(\'collections.core_path\', null, $modx->getOption(\'core_path\', null, MODX_CORE_PATH) . \'components\\/collections\\/\');\\n\\/** @var Collections $collections *\\/\\n$collections = $modx->getService(\\n    \'collections\',\\n    \'Collections\',\\n    $corePath . \'model\\/collections\\/\',\\n    array(\\n        \'core_path\' => $corePath\\n    )\\n);\\n\\nif (!($collections instanceof Collections)) return \'\';\\n\\n$className = \\"\\\\\\\\Collections\\\\\\\\Events\\\\\\\\{$modx->event->name}\\";\\nif (class_exists($className)) {\\n    \\/** @var \\\\Collections\\\\Events\\\\Event $handler *\\/\\n    $handler = new $className($modx, $scriptProperties);\\n    $handler->run();\\n}\\n\\nreturn;","locked":0,"properties":"a:0:{}","disabled":0,"moduleguid":"","static":0,"static_file":"","content":"\\/**\\n * Collections\\n *\\n * DESCRIPTION\\n *\\n * This plugin inject JS to handle proper working of close buttons in Resource\'s panel (OnDocFormPrerender)\\n * This plugin handles setting proper show_in_tree parameter (OnBeforeDocFormSave, OnResourceSort)\\n *\\n * @var modX $modx\\n * @var array $scriptProperties\\n *\\/\\n$corePath = $modx->getOption(\'collections.core_path\', null, $modx->getOption(\'core_path\', null, MODX_CORE_PATH) . \'components\\/collections\\/\');\\n\\/** @var Collections $collections *\\/\\n$collections = $modx->getService(\\n    \'collections\',\\n    \'Collections\',\\n    $corePath . \'model\\/collections\\/\',\\n    array(\\n        \'core_path\' => $corePath\\n    )\\n);\\n\\nif (!($collections instanceof Collections)) return \'\';\\n\\n$className = \\"\\\\\\\\Collections\\\\\\\\Events\\\\\\\\{$modx->event->name}\\";\\nif (class_exists($className)) {\\n    \\/** @var \\\\Collections\\\\Events\\\\Event $handler *\\/\\n    $handler = new $className($modx, $scriptProperties);\\n    $handler->run();\\n}\\n\\nreturn;"}',
+        'guid' => 'e28d139339c5f53bbd9acb92103b70bf',
+        'native_key' => NULL,
+        'signature' => '9782d8a341bbdea264eaf4ad867fd42e',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Children' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'parent',
+        1 => 'category',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Templates' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'templatename',
+    ),
+    'TemplateVars' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'unique_key' => 'name',
+      'preserve_keys' => false,
+      'update_object' => true,
+      'related_objects' => true,
+      'related_object_attributes' => 
+      array (
+        'PluginEvents' => 
+        array (
+          'preserve_keys' => true,
+          'update_object' => false,
+          'unique_key' => 
+          array (
+            0 => 'pluginid',
+            1 => 'event',
+          ),
+        ),
+      ),
+    ),
+  ),
+  'namespace' => 'collections',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"collections-3.8.1-pl\\/modCategory\\/166e1f110c2196386c8093883ecfbd7c.resolve.customevents.resolver","type":"php","name":"resolve.customevents"}',
+    ),
+    1 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"collections-3.8.1-pl\\/modCategory\\/166e1f110c2196386c8093883ecfbd7c.resolve.switchback.resolver","type":"php","name":"resolve.switchback"}',
+    ),
+    2 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"collections-3.8.1-pl\\/modCategory\\/166e1f110c2196386c8093883ecfbd7c\\/2\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"collections"}',
+    ),
+    3 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"collections-3.8.1-pl\\/modCategory\\/166e1f110c2196386c8093883ecfbd7c\\/3\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"collections"}',
+    ),
+    4 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"collections-3.8.1-pl\\/modCategory\\/166e1f110c2196386c8093883ecfbd7c.gpm.resolve.tables.resolver","type":"php","name":"gpm.resolve.tables"}',
+    ),
+    5 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"collections-3.8.1-pl\\/modCategory\\/166e1f110c2196386c8093883ecfbd7c.gpm.resolve.extension_package.resolver","type":"php","name":"gpm.resolve.extension_package"}',
+    ),
+    6 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"collections-3.8.1-pl\\/modCategory\\/166e1f110c2196386c8093883ecfbd7c.resolve.synctables.resolver","type":"php","name":"resolve.synctables"}',
+    ),
+    7 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"collections-3.8.1-pl\\/modCategory\\/166e1f110c2196386c8093883ecfbd7c.resolve.updatefromfirst.resolver","type":"php","name":"resolve.updatefromfirst"}',
+    ),
+    8 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"collections-3.8.1-pl\\/modCategory\\/166e1f110c2196386c8093883ecfbd7c.resolve.defaulttemplate.resolver","type":"php","name":"resolve.defaulttemplate"}',
+    ),
+    9 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"collections-3.8.1-pl\\/modCategory\\/166e1f110c2196386c8093883ecfbd7c.resolve.fixselections.resolver","type":"php","name":"resolve.fixselections"}',
+    ),
+    10 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"collections-3.8.1-pl\\/modCategory\\/166e1f110c2196386c8093883ecfbd7c.resolve.fixsystemsettings.resolver","type":"php","name":"resolve.fixsystemsettings"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '38258122fce322e24d3180a17b445430',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '166e1f110c2196386c8093883ecfbd7c',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"Collections","rank":0}',
+);
