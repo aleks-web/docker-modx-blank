@@ -25,7 +25,7 @@ services:
         container_name: site
         build:
             context: ./
-            dockerfile: ./docker/php-fpm/Dockerfile
+            dockerfile: ./docker/php-fpm7.4/Dockerfile
         networks:
             - docker-modx-network
         volumes:
