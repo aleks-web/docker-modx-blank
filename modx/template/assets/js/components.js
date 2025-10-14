@@ -5,13 +5,12 @@ $(document).ready(() => {
     
     $('.agree-click').on('click', (e) => {
         let $block = $(e.currentTarget).parents('.agree');
-        let $input = $block.find('input[type="checkbox"]');
+        let $input = $block.find('input[type="hidden"]');
         let agreeId = $block.data('id');
         
-        if ($input.is(':checked') === false) {
+        if ($input.val() === '') {
             $block.addClass('active');
             $input.val(1);
-            $input.prop('checked', true);
             
             if (agreeId) {
                 $.cookie('agree-' + agreeId, true);
@@ -19,7 +18,6 @@ $(document).ready(() => {
         } else {
             $block.removeClass('active');
             $input.val('');
-            $input.prop('checked', false);
 
             if (agreeId) {
                 $.removeCookie('agree-' + agreeId);
@@ -27,9 +25,9 @@ $(document).ready(() => {
         }
     });
     
-    $('.agree').each((agreeI, agreeEl) => {
-        const $block = $(agreeEl);
-        let $input = $block.find('input[type="checkbox"]');
+    $('.agree').each((agreeIndex, agreeElement) => {
+        const $block = $(agreeElement);
+        let $input = $block.find('input[type="hidden"]');
         
         const agreeId = $block.data('id');
         const agreeCookieValue = $.cookie('agree-' + agreeId);
@@ -37,7 +35,6 @@ $(document).ready(() => {
         if (agreeCookieValue === 'true' && !$block.hasClass('active')) {
             $block.addClass('active');
             $input.val(1);
-            $input.prop('checked', true);
         }
     });
 

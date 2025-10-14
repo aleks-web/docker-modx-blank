@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.3
 -- https://www.phpmyadmin.net/
 --
 -- Хост: db_modx:3306
--- Время создания: Авг 05 2025 г., 07:36
+-- Время создания: Окт 14 2025 г., 17:39
 -- Версия сервера: 5.7.44
--- Версия PHP: 8.2.25
+-- Версия PHP: 8.3.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -2678,7 +2678,87 @@ INSERT INTO `modx_manager_log` (`id`, `user`, `occurred`, `action`, `classKey`, 
 (1182, 1, '2025-07-11 10:20:04', 'login', 'modContext', 'mgr'),
 (1183, 1, '2025-07-11 10:20:34', 'resource_update', 'modResource', '1'),
 (1184, 1, '2025-07-11 10:23:32', 'resource_create', 'msProduct', '20'),
-(1185, 1, '2025-08-05 07:34:55', 'login', 'modContext', 'mgr');
+(1185, 1, '2025-08-05 07:34:55', 'login', 'modContext', 'mgr'),
+(1186, 1, '2025-10-14 17:20:57', 'login', 'modContext', 'mgr'),
+(1187, 1, '2025-10-14 17:21:32', 'file_update', '', '/var/www/modx/template/assets/js/components.js'),
+(1188, 1, '2025-10-14 17:21:33', 'file_update', '', '/var/www/modx/template/assets/js/components.js'),
+(1189, 1, '2025-10-14 17:22:12', 'chunk_update', 'modChunk', '33'),
+(1190, 1, '2025-10-14 17:22:12', 'propertyset_update_from_element', 'modPropertySet', 'modChunk 33 Default'),
+(1191, 1, '2025-10-14 17:22:15', 'chunk_update', 'modChunk', '33'),
+(1192, 1, '2025-10-14 17:22:15', 'propertyset_update_from_element', 'modPropertySet', 'modChunk 33 Default'),
+(1193, 1, '2025-10-14 17:22:31', 'chunk_update', 'modChunk', '33'),
+(1194, 1, '2025-10-14 17:22:31', 'propertyset_update_from_element', 'modPropertySet', 'modChunk 33 Default'),
+(1195, 1, '2025-10-14 17:22:35', 'chunk_update', 'modChunk', '33'),
+(1196, 1, '2025-10-14 17:22:36', 'propertyset_update_from_element', 'modPropertySet', 'modChunk 33 Default'),
+(1197, 1, '2025-10-14 17:22:36', 'chunk_update', 'modChunk', '33'),
+(1198, 1, '2025-10-14 17:22:37', 'propertyset_update_from_element', 'modPropertySet', 'modChunk 33 Default'),
+(1199, 1, '2025-10-14 17:22:38', 'chunk_update', 'modChunk', '33'),
+(1200, 1, '2025-10-14 17:22:38', 'propertyset_update_from_element', 'modPropertySet', 'modChunk 33 Default'),
+(1201, 1, '2025-10-14 17:22:39', 'chunk_update', 'modChunk', '33'),
+(1202, 1, '2025-10-14 17:22:39', 'propertyset_update_from_element', 'modPropertySet', 'modChunk 33 Default'),
+(1203, 1, '2025-10-14 17:22:40', 'chunk_update', 'modChunk', '33'),
+(1204, 1, '2025-10-14 17:22:40', 'propertyset_update_from_element', 'modPropertySet', 'modChunk 33 Default'),
+(1205, 1, '2025-10-14 17:22:45', 'chunk_update', 'modChunk', '33'),
+(1206, 1, '2025-10-14 17:22:46', 'propertyset_update_from_element', 'modPropertySet', 'modChunk 33 Default'),
+(1207, 1, '2025-10-14 17:23:05', 'chunk_update', 'modChunk', '33'),
+(1208, 1, '2025-10-14 17:23:05', 'propertyset_update_from_element', 'modPropertySet', 'modChunk 33 Default'),
+(1209, 1, '2025-10-14 17:23:06', 'chunk_update', 'modChunk', '33'),
+(1210, 1, '2025-10-14 17:23:06', 'propertyset_update_from_element', 'modPropertySet', 'modChunk 33 Default'),
+(1211, 1, '2025-10-14 17:23:36', 'chunk_update', 'modChunk', '33'),
+(1212, 1, '2025-10-14 17:23:37', 'propertyset_update_from_element', 'modPropertySet', 'modChunk 33 Default'),
+(1213, 1, '2025-10-14 17:23:37', 'chunk_update', 'modChunk', '33'),
+(1214, 1, '2025-10-14 17:23:38', 'propertyset_update_from_element', 'modPropertySet', 'modChunk 33 Default'),
+(1215, 1, '2025-10-14 17:23:39', 'chunk_update', 'modChunk', '33'),
+(1216, 1, '2025-10-14 17:23:39', 'propertyset_update_from_element', 'modPropertySet', 'modChunk 33 Default'),
+(1217, 1, '2025-10-14 17:25:01', 'template_update', 'modTemplate', '19'),
+(1218, 1, '2025-10-14 17:25:02', 'propertyset_update_from_element', 'modPropertySet', 'modTemplate 19 Default'),
+(1219, 1, '2025-10-14 17:25:03', 'template_update', 'modTemplate', '19'),
+(1220, 1, '2025-10-14 17:25:03', 'propertyset_update_from_element', 'modPropertySet', 'modTemplate 19 Default'),
+(1221, 1, '2025-10-14 17:25:05', 'template_update', 'modTemplate', '19'),
+(1222, 1, '2025-10-14 17:25:05', 'propertyset_update_from_element', 'modPropertySet', 'modTemplate 19 Default'),
+(1223, 1, '2025-10-14 17:26:42', 'file_update', '', '/var/www/modx/template/assets/scss/components.scss'),
+(1224, 1, '2025-10-14 17:27:18', 'file_update', '', '/var/www/modx/template/assets/scss/components.scss'),
+(1225, 1, '2025-10-14 17:27:25', 'file_update', '', '/var/www/modx/template/assets/scss/components.scss'),
+(1226, 1, '2025-10-14 17:27:54', 'file_update', '', '/var/www/modx/template/assets/scss/components.scss'),
+(1227, 1, '2025-10-14 17:28:18', 'file_update', '', '/var/www/modx/template/assets/scss/components.scss'),
+(1228, 1, '2025-10-14 17:28:29', 'file_update', '', '/var/www/modx/template/assets/scss/components.scss'),
+(1229, 1, '2025-10-14 17:29:18', 'file_update', '', '/var/www/modx/template/assets/scss/components.scss'),
+(1230, 1, '2025-10-14 17:29:46', 'file_update', '', '/var/www/modx/template/assets/scss/components.scss'),
+(1231, 1, '2025-10-14 17:30:01', 'file_update', '', '/var/www/modx/template/assets/scss/components.scss'),
+(1232, 1, '2025-10-14 17:30:26', 'file_update', '', '/var/www/modx/template/assets/scss/components.scss'),
+(1233, 1, '2025-10-14 17:31:25', 'file_update', '', '/var/www/modx/template/assets/scss/components.scss'),
+(1234, 1, '2025-10-14 17:32:20', 'file_update', '', '/var/www/modx/template/assets/scss/components.scss'),
+(1235, 1, '2025-10-14 17:32:25', 'file_update', '', '/var/www/modx/template/assets/scss/components.scss'),
+(1236, 1, '2025-10-14 17:32:29', 'file_update', '', '/var/www/modx/template/assets/scss/components.scss'),
+(1237, 1, '2025-10-14 17:32:33', 'file_update', '', '/var/www/modx/template/assets/scss/components.scss'),
+(1238, 1, '2025-10-14 17:32:36', 'file_update', '', '/var/www/modx/template/assets/scss/components.scss'),
+(1239, 1, '2025-10-14 17:33:10', 'file_update', '', '/var/www/modx/template/assets/scss/components.scss'),
+(1240, 1, '2025-10-14 17:33:21', 'file_update', '', '/var/www/modx/template/assets/scss/components.scss'),
+(1241, 1, '2025-10-14 17:34:06', 'file_update', '', '/var/www/modx/template/assets/scss/components.scss'),
+(1242, 1, '2025-10-14 17:34:42', 'template_create', 'modTemplate', '22'),
+(1243, 1, '2025-10-14 17:34:54', 'template_update', 'modTemplate', '22'),
+(1244, 1, '2025-10-14 17:34:54', 'propertyset_update_from_element', 'modPropertySet', 'modTemplate 22 Default'),
+(1245, 1, '2025-10-14 17:35:07', 'template_update', 'modTemplate', '22'),
+(1246, 1, '2025-10-14 17:35:08', 'propertyset_update_from_element', 'modPropertySet', 'modTemplate 22 Default'),
+(1247, 1, '2025-10-14 17:35:48', 'template_update', 'modTemplate', '22'),
+(1248, 1, '2025-10-14 17:35:48', 'propertyset_update_from_element', 'modPropertySet', 'modTemplate 22 Default'),
+(1249, 1, '2025-10-14 17:35:49', 'template_update', 'modTemplate', '22'),
+(1250, 1, '2025-10-14 17:35:49', 'propertyset_update_from_element', 'modPropertySet', 'modTemplate 22 Default'),
+(1251, 1, '2025-10-14 17:35:56', 'template_update', 'modTemplate', '22'),
+(1252, 1, '2025-10-14 17:35:56', 'propertyset_update_from_element', 'modPropertySet', 'modTemplate 22 Default'),
+(1253, 1, '2025-10-14 17:36:34', 'resource_create', 'modDocument', '21'),
+(1254, 1, '2025-10-14 17:36:48', 'resource_update', 'modResource', '21'),
+(1255, 1, '2025-10-14 17:37:23', 'template_update', 'modTemplate', '22'),
+(1256, 1, '2025-10-14 17:37:24', 'propertyset_update_from_element', 'modPropertySet', 'modTemplate 22 Default'),
+(1257, 1, '2025-10-14 17:37:34', 'template_update', 'modTemplate', '22'),
+(1258, 1, '2025-10-14 17:37:35', 'propertyset_update_from_element', 'modPropertySet', 'modTemplate 22 Default'),
+(1259, 1, '2025-10-14 17:37:44', 'template_update', 'modTemplate', '22'),
+(1260, 1, '2025-10-14 17:37:44', 'propertyset_update_from_element', 'modPropertySet', 'modTemplate 22 Default'),
+(1261, 1, '2025-10-14 17:37:48', 'template_update', 'modTemplate', '22'),
+(1262, 1, '2025-10-14 17:37:48', 'propertyset_update_from_element', 'modPropertySet', 'modTemplate 22 Default'),
+(1263, 1, '2025-10-14 17:38:09', 'template_update', 'modTemplate', '22'),
+(1264, 1, '2025-10-14 17:38:09', 'propertyset_update_from_element', 'modPropertySet', 'modTemplate 22 Default'),
+(1265, 1, '2025-10-14 17:38:50', 'clear_cache', '', 'mgr');
 
 -- --------------------------------------------------------
 
@@ -3474,9 +3554,7 @@ CREATE TABLE `modx_session` (
 --
 
 INSERT INTO `modx_session` (`id`, `access`, `data`) VALUES
-('6ba93f54ff3ce94802c10c6ee1a50c65', 1753793686, 'modx.user.0.resourceGroups|a:1:{s:3:\"web\";a:0:{}}modx.user.0.attributes|a:1:{s:3:\"web\";a:5:{s:16:\"modAccessContext\";a:1:{s:3:\"web\";a:1:{i:0;a:3:{s:9:\"principal\";i:0;s:9:\"authority\";s:1:\"0\";s:6:\"policy\";a:3:{s:4:\"load\";b:1;s:6:\"formit\";b:1;s:18:\"formit_encryptions\";b:0;}}}}s:22:\"modAccessResourceGroup\";a:0:{}s:17:\"modAccessCategory\";a:0:{}s:28:\"sources.modAccessMediaSource\";a:0:{}s:18:\"modAccessNamespace\";a:0:{}}}modx.user.contextTokens|a:0:{}'),
-('937fe393f2ec69eacfc9e989e54a4779', 1753788917, 'modx.user.0.resourceGroups|a:1:{s:3:\"web\";a:0:{}}modx.user.0.attributes|a:1:{s:3:\"web\";a:5:{s:16:\"modAccessContext\";a:1:{s:3:\"web\";a:1:{i:0;a:3:{s:9:\"principal\";i:0;s:9:\"authority\";s:1:\"0\";s:6:\"policy\";a:3:{s:4:\"load\";b:1;s:6:\"formit\";b:1;s:18:\"formit_encryptions\";b:0;}}}}s:22:\"modAccessResourceGroup\";a:0:{}s:17:\"modAccessCategory\";a:0:{}s:28:\"sources.modAccessMediaSource\";a:0:{}s:18:\"modAccessNamespace\";a:0:{}}}modx.user.contextTokens|a:0:{}'),
-('a3d2a9c3875ddf10df8323dd6098702a', 1754379295, 'modx.user.0.resourceGroups|a:1:{s:3:\"mgr\";a:0:{}}modx.user.0.attributes|a:2:{s:3:\"web\";a:5:{s:16:\"modAccessContext\";a:1:{s:3:\"web\";a:1:{i:0;a:3:{s:9:\"principal\";i:0;s:9:\"authority\";s:1:\"0\";s:6:\"policy\";a:3:{s:4:\"load\";b:1;s:6:\"formit\";b:1;s:18:\"formit_encryptions\";b:0;}}}}s:22:\"modAccessResourceGroup\";a:0:{}s:17:\"modAccessCategory\";a:0:{}s:28:\"sources.modAccessMediaSource\";a:0:{}s:18:\"modAccessNamespace\";a:0:{}}s:3:\"mgr\";a:5:{s:16:\"modAccessContext\";a:1:{s:3:\"web\";a:1:{i:0;a:3:{s:9:\"principal\";i:0;s:9:\"authority\";s:1:\"0\";s:6:\"policy\";a:3:{s:4:\"load\";b:1;s:6:\"formit\";b:1;s:18:\"formit_encryptions\";b:0;}}}}s:22:\"modAccessResourceGroup\";a:0:{}s:17:\"modAccessCategory\";a:0:{}s:28:\"sources.modAccessMediaSource\";a:0:{}s:18:\"modAccessNamespace\";a:0:{}}}modx.user.contextTokens|a:1:{s:3:\"mgr\";i:1;}modx.mgr.user.token|s:52:\"modx67fcd21b73ac70.45646993_16891b41f147c49.72684389\";modx.mgr.session.cookie.lifetime|i:604800;modx.mgr.user.config|a:0:{}admintools|a:4:{s:16:\"favoriteElements\";a:3:{s:6:\"states\";a:5:{s:8:\"template\";b:0;s:5:\"chunk\";b:0;s:2:\"tv\";b:0;s:6:\"plugin\";b:0;s:7:\"snippet\";b:0;}s:8:\"elements\";a:5:{s:9:\"templates\";a:0:{}s:3:\"tvs\";a:0:{}s:6:\"chunks\";a:0:{}s:7:\"plugins\";a:0:{}s:8:\"snippets\";a:0:{}}s:4:\"icon\";s:0:\"\";}s:14:\"systemSettings\";a:2:{s:9:\"namespace\";s:4:\"core\";s:4:\"area\";s:14:\"authentication\";}s:6:\"locked\";b:0;s:6:\"config\";a:6:{s:13:\"connector_url\";s:43:\"/assets/components/admintools/connector.php\";s:5:\"theme\";s:0:\"\";s:6:\"region\";s:4:\"west\";s:12:\"lock_timeout\";i:0;s:13:\"show_lockmenu\";s:1:\"1\";s:8:\"messages\";i:0;}}');
+('0c9d7381054a9223b02009214d2b7603', 1760463406, 'modx.user.0.resourceGroups|a:1:{s:3:\"mgr\";a:0:{}}modx.user.0.attributes|a:2:{s:3:\"web\";a:5:{s:16:\"modAccessContext\";a:1:{s:3:\"web\";a:1:{i:0;a:3:{s:9:\"principal\";i:0;s:9:\"authority\";s:1:\"0\";s:6:\"policy\";a:3:{s:4:\"load\";b:1;s:6:\"formit\";b:1;s:18:\"formit_encryptions\";b:0;}}}}s:22:\"modAccessResourceGroup\";a:0:{}s:17:\"modAccessCategory\";a:0:{}s:28:\"sources.modAccessMediaSource\";a:0:{}s:18:\"modAccessNamespace\";a:0:{}}s:3:\"mgr\";a:5:{s:16:\"modAccessContext\";a:1:{s:3:\"web\";a:1:{i:0;a:3:{s:9:\"principal\";i:0;s:9:\"authority\";s:1:\"0\";s:6:\"policy\";a:3:{s:4:\"load\";b:1;s:6:\"formit\";b:1;s:18:\"formit_encryptions\";b:0;}}}}s:22:\"modAccessResourceGroup\";a:0:{}s:17:\"modAccessCategory\";a:0:{}s:28:\"sources.modAccessMediaSource\";a:0:{}s:18:\"modAccessNamespace\";a:0:{}}}modx.user.contextTokens|a:1:{s:3:\"mgr\";i:1;}modx.mgr.user.token|s:52:\"modx67fcd21b73ac70.45646993_168ee8678f045a4.36042694\";modx.mgr.session.cookie.lifetime|i:0;modx.mgr.user.config|a:0:{}admintools|a:4:{s:16:\"favoriteElements\";a:3:{s:6:\"states\";a:5:{s:8:\"template\";b:0;s:5:\"chunk\";b:0;s:2:\"tv\";b:0;s:6:\"plugin\";b:0;s:7:\"snippet\";b:0;}s:8:\"elements\";a:5:{s:9:\"templates\";a:0:{}s:3:\"tvs\";a:0:{}s:6:\"chunks\";a:0:{}s:7:\"plugins\";a:0:{}s:8:\"snippets\";a:0:{}}s:4:\"icon\";s:0:\"\";}s:14:\"systemSettings\";a:2:{s:9:\"namespace\";s:4:\"core\";s:4:\"area\";s:14:\"authentication\";}s:6:\"locked\";b:0;s:6:\"config\";a:6:{s:13:\"connector_url\";s:43:\"/assets/components/admintools/connector.php\";s:5:\"theme\";s:0:\"\";s:6:\"region\";s:4:\"west\";s:12:\"lock_timeout\";i:0;s:13:\"show_lockmenu\";s:1:\"1\";s:8:\"messages\";i:0;}}modx.user.1.userGroups|a:1:{i:0;i:1;}newResourceTokens|a:2:{i:0;s:23:\"68ee8a03926ee8.26756295\";i:1;s:23:\"68ee8a2480be51.01562308\";}');
 
 -- --------------------------------------------------------
 
@@ -3555,7 +3633,8 @@ INSERT INTO `modx_site_content` (`id`, `type`, `contentType`, `pagetitle`, `long
 (17, 'document', 'text/html', '503', '', '', '503', 1, '', 1, 0, 0, 18, 0, '', '<p>Сайт временно не доступен 503</p>', 1, 20, 1, 1, 1, 1, 1745904730, 1, 1745905252, 0, 0, 0, 1745904720, 1, '', 0, 0, 0, 0, 1, 'modDocument', 'web', 1, 'system/503', 0, 0, 1, NULL),
 (18, 'document', 'text/html', 'Системное', '', '', 'system', 1, '', 0, 0, 0, 0, 1, '', '', 1, 1, 7, 1, 1, 1, 1745905079, 1, 1745905082, 0, 0, 0, 0, 0, 'Системное', 0, 0, 0, 0, 1, 'modDocument', 'web', 1, 'system/', 0, 0, 1, NULL),
 (19, 'document', 'text/html', 'Сертификаты', '', '', 'certificates', 1, '', 1, 0, 0, 9, 0, '', '', 1, 21, 1, 1, 1, 1, 1748262798, 1, 1748262829, 0, 0, 0, 1744624980, 1, '', 0, 0, 0, 0, 0, 'modDocument', 'web', 1, 'certificates', 1, 0, 1, NULL),
-(20, 'document', 'text/html', 'Product 1', '', '', 'product-1', 1, '', 1, 0, 0, 2, 0, '', '', 1, 3, 0, 1, 1, 1, 1752229412, 0, 0, 0, 0, 0, 1752229412, 1, '', 0, 0, 0, 0, 1, 'msProduct', 'web', 1, 'catalog/product-1', 0, 0, 0, NULL);
+(20, 'document', 'text/html', 'Product 1', '', '', 'product-1', 1, '', 1, 0, 0, 2, 0, '', '', 1, 3, 0, 1, 1, 1, 1752229412, 0, 0, 0, 0, 0, 1752229412, 1, '', 0, 0, 0, 0, 1, 'msProduct', 'web', 1, 'catalog/product-1', 0, 0, 0, NULL),
+(21, 'document', 'text/html', 'Компоненты', 'Компоненты', 'Список компонентов', 'components', 1, '', 0, 0, 0, 0, 0, 'Список компонентов', '', 1, 22, 7, 1, 1, 1, 1760463394, 1, 1760463408, 0, 0, 0, 0, 0, 'Компоненты', 0, 0, 0, 0, 1, 'modDocument', 'web', 1, 'components', 0, 0, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -3617,7 +3696,7 @@ INSERT INTO `modx_site_htmlsnippets` (`id`, `source`, `property_preprocess`, `na
 (30, 1, 0, 'scripts', '', 0, 5, 0, '{$_modx->getPlaceholder(\'MinifyX.css\')}\n{$_modx->getPlaceholder(\'MinifyX.javascript\')}\n\n{* Start config scripts *}\n{\'yandex_counter\' | config}\n{* End config scripts *}', 0, 'a:0:{}', 0, ''),
 (31, 1, 0, 'advantages', '', 0, 21, 0, 'migx_advantages', 0, 'a:0:{}', 0, ''),
 (32, 1, 0, 'certificates', 'migx_certificates', 0, 23, 0, 'migx_certificates', 0, 'a:0:{}', 0, ''),
-(33, 1, 0, 'agree', '', 0, 27, 0, '{set $agreeCookieValue = $.cookie[\'agree-\' ~ $agreeId]}\n\n{if $isActive === \'1\' || $agreeCookieValue === \'true\'}\n    {set $isActive = 1}\n{/if}\n\n<div class=\"agree [[+isActive:is=`1`:then=`active`]]\" [[+agreeId:ne=``:then=`data-id=\"[[+agreeId]]\"`]]>\n    <input type=\"checkbox\" name=\"{$name ? $name : \'agree\'}\" value=\"[[+isActive:is=`1`:then=`1`]]\">\n\n    <div class=\"agree__checkbox agree-click\">\n        <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"currentColor\" viewBox=\"0 0 16 16\">\n            <path d=\"M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z\" />\n        </svg>\n    </div>\n    \n    <div class=\"agree__desc\">\n        [[+text:is=``:then=`<span class=\"agree-click\">Отправляя форму, я соглашаюсь с</span> <a href=\"[[~10]]\" target=\"_blank\" class=\"agree-click\">политикой обработки персональных данных</a>`:else=`[[+text]]`]]\n    </div>\n</div>', 0, 'a:0:{}', 0, '');
+(33, 1, 0, 'agree', '', 0, 27, 0, '{set $agreeCookieValue = $.cookie[\'agree-\' ~ $agreeId]}\n\n{if $isActive === \'1\' || $agreeCookieValue === \'true\'}\n    {set $isActive = 1}\n{/if}\n\n<div class=\"agree [[+isActive:is=`1`:then=`active`]]\" [[+agreeId:ne=``:then=`data-id=\"[[+agreeId]]\"`]]>\n    <input type=\"hidden\" name=\"agree\" value=\"[[+isActive:is=`1`:then=`1`]]\">\n\n    <div class=\"agree__checkbox agree-click\">\n        <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"currentColor\" viewBox=\"0 0 16 16\">\n            <path d=\"M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z\" />\n        </svg>\n    </div>\n    \n    <div class=\"agree__desc\">\n        <span class=\"agree-click\">Отправляя форму, я соглашаюсь с</span> <a href=\"[[~10]]\" target=\"_blank\" class=\"agree-click\">политикой обработки персональных данных</a>\n    </div>\n</div>', 0, 'a:0:{}', 0, '');
 
 -- --------------------------------------------------------
 
@@ -3877,9 +3956,10 @@ INSERT INTO `modx_site_templates` (`id`, `source`, `property_preprocess`, `templ
 (16, 1, 0, 'FAQ', '', 0, 22, '', 0, '', 0, 'a:0:{}', 0, ''),
 (17, 1, 0, 'Портфолио (общая)', '', 0, 25, '', 0, '', 0, 'a:0:{}', 0, ''),
 (18, 1, 0, 'Портфолио (запись)', '', 0, 25, '', 0, '', 0, 'a:0:{}', 0, ''),
-(19, 1, 0, 'Главная', '', 0, 0, '', 0, '{extends \'template:1\'}\n\n{block \'body\'}\n    Главная\n{/block}', 0, 'a:0:{}', 0, ''),
+(19, 1, 0, 'Главная', '', 0, 0, '', 0, '{extends \'template:1\'}\n\n{block \'body\'}\n    {\'agree\' | chunk}\n{/block}', 0, 'a:0:{}', 0, ''),
 (20, 1, 0, 'Страница 503', '', 0, 18, '', 0, '503:\n{\'content\' | resource}', 0, 'a:0:{}', 0, ''),
-(21, 1, 0, 'Сертификаты', '', 0, 29, '', 0, '', 0, 'a:0:{}', 0, '');
+(21, 1, 0, 'Сертификаты', '', 0, 29, '', 0, '', 0, 'a:0:{}', 0, ''),
+(22, 1, 0, 'Компоненты (для разработчиков)', '', 0, 18, '', 0, '{extends \'template:1\'}\n\n{block \'body\'}\n    <h2>Компонент \"Согласие с политикой конфиденциальности\".</h2>\n    {\'agree\' | chunk}\n{/block}', 0, 'a:0:{}', 0, '');
 
 -- --------------------------------------------------------
 
@@ -4876,7 +4956,7 @@ CREATE TABLE `modx_user_attributes` (
 --
 
 INSERT INTO `modx_user_attributes` (`id`, `internalKey`, `fullname`, `email`, `phone`, `mobilephone`, `blocked`, `blockeduntil`, `blockedafter`, `logincount`, `lastlogin`, `thislogin`, `failedlogincount`, `sessionid`, `dob`, `gender`, `address`, `country`, `city`, `state`, `zip`, `fax`, `photo`, `comment`, `website`, `extended`) VALUES
-(1, 1, 'Администратор по умолчанию', 'dok.go@yandex.ru', '', '', 0, 0, 0, 11, 1752229204, 1754379295, 0, 'a3d2a9c3875ddf10df8323dd6098702a', 0, 0, '', '', '', '', '', '', '', '', '', '{\"adminToolsStates\":{\"template\":false,\"chunk\":false,\"tv\":false,\"plugin\":false,\"snippet\":false},\"adminToolsElements\":{\"templates\":[],\"tvs\":[],\"chunks\":[],\"plugins\":[],\"snippets\":[]},\"systemSettings\":{\"namespace\":\"core\",\"area\":\"authentication\"}}');
+(1, 1, 'Администратор по умолчанию', 'dok.go@yandex.ru', '', '', 0, 0, 0, 12, 1754379295, 1760462456, 0, '0c9d7381054a9223b02009214d2b7603', 0, 0, '', '', '', '', '', '', '', '', '', '{\"adminToolsStates\":{\"template\":false,\"chunk\":false,\"tv\":false,\"plugin\":false,\"snippet\":false},\"adminToolsElements\":{\"templates\":[],\"tvs\":[],\"chunks\":[],\"plugins\":[],\"snippets\":[]},\"systemSettings\":{\"namespace\":\"core\",\"area\":\"authentication\"}}');
 
 -- --------------------------------------------------------
 
@@ -5036,23 +5116,6 @@ CREATE TABLE `sessions` (
   `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `last_activity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Дамп данных таблицы `sessions`
---
-
-INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('50Bu1CbuLjdUlITRJjmF7HwNXDqzmNHYJsU8cXO5', NULL, '172.23.0.1', 'PostmanRuntime/7.44.1', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiOVhEelVTRm5XeXJtbUMxd3d4Yjd4RDVqbHEyN0IwMGlVSlNxVUYzcSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTg6Imh0dHA6Ly9teGFkbWluLmxvYyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1752578601),
-('DDOvTuA7kGdQr3O9R7CgntdNp7Uiy8lXRdu9Qulv', NULL, '172.24.0.1', 'PostmanRuntime/7.44.1', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiQkNmd1lERkM1eFVXV3ltT0dIRUZlTWM2Z1NZeFJrcnlmbkJtWTFSOSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTg6Imh0dHA6Ly9teGFkbWluLmxvYyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1752579485),
-('GRJschXp0lApVrwIz5oKqbLqRuYfxlpykVhCIley', NULL, '192.168.64.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoieFYzaWpyR1p1dmU0ejU2c2hWOWFBZ0lUcXpWSlhkZFk5NVlKelZtNiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTg6Imh0dHA6Ly9teGFkbWluLmxvYyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1754299172),
-('Gu2O4r8gMHcspAJmJcHJq8sp43SjUyqDXunwuyHL', NULL, '172.24.0.1', 'PostmanRuntime/7.44.1', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiYmJ4RVJzaXBiNG1URE92SmZhVnVLd1lHUmJ5M2YzdnI0R0RBTTEzYyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTg6Imh0dHA6Ly9teGFkbWluLmxvYyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1752579654),
-('iMmjPgxvQFjmeEiOLPJjaLrRuOvb5yta9NDLbF5R', NULL, '172.24.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiNmZsMHJxYkNUcndLcHFBc1RENHV6MklRUG1tdTZmSENkWklUV1FVRiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTg6Imh0dHA6Ly9teGFkbWluLmxvYyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1753434199),
-('ORcV8hKlZpArIr7ywk3pBTADeV2E7FWiHT4WPbjC', NULL, '172.24.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiMm9KRHF4cnVhWXVDSkxFOFZJSXEyUWRENG9IWGYxYmxQcGtzb1FOVSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTg6Imh0dHA6Ly9teGFkbWluLmxvYyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1752579560),
-('RnGFhzJTUmVvhoyuagxCNWzZH8BSQoGs0mvq7GAg', NULL, '192.168.64.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiMFptSUxMSFo0S1B4QnNQajdLWjBrbXdjaDB6Unp3ZjdJdmpwQjZzNiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTg6Imh0dHA6Ly9teGFkbWluLmxvYyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1754022097),
-('RqKhGowQHqx00kpe8Kp7qmB8tiyT0YvpdxzuJGSJ', NULL, '172.23.0.1', 'PostmanRuntime/7.44.1', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoid1p0cmVFZUZKOEFIZDFneFVvd3V1eTVvT0ZkSzU2ZGlEaDVkS2h1WiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTg6Imh0dHA6Ly9teGFkbWluLmxvYyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1752578188),
-('VejOPK7vuWipV4j8nt6ukFGvhgtshJJUI8JsWIl7', NULL, '172.24.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiellPR0tMSWlMVUdDSW1aZGl2ZWRQZDRXUmNTaEI3UFM4V0VwRTNGRyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTg6Imh0dHA6Ly9teGFkbWluLmxvYyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1753443123),
-('viy82XDn7C4Z7j6EkEsfvDPvxPDK3DBDYQbxAauW', NULL, '172.31.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiOEs4WXJzb3FBMGg2MXF2OFl2Ym1maXdJbDZVZzVLblZScDByWDVRMSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTg6Imh0dHA6Ly9teGFkbWluLmxvYyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1753809513),
-('XAYBlDgyWRUIwPnh3dqkE1WnTSGAdIPfGirPGt49', NULL, '172.24.0.1', 'PostmanRuntime/7.44.1', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiZ2xwR0FUdU44ajFGalJRd3FtRktMM0RDbGNsMkNQZEFEWk9HZXZqbCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTg6Imh0dHA6Ly9teGFkbWluLmxvYyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1752579288);
 
 -- --------------------------------------------------------
 
@@ -6260,7 +6323,7 @@ ALTER TABLE `modx_lexicon_entries`
 -- AUTO_INCREMENT для таблицы `modx_manager_log`
 --
 ALTER TABLE `modx_manager_log`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1186;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1266;
 
 --
 -- AUTO_INCREMENT для таблицы `modx_media_sources`
@@ -6404,7 +6467,7 @@ ALTER TABLE `modx_register_topics`
 -- AUTO_INCREMENT для таблицы `modx_site_content`
 --
 ALTER TABLE `modx_site_content`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT для таблицы `modx_site_htmlsnippets`
@@ -6428,7 +6491,7 @@ ALTER TABLE `modx_site_snippets`
 -- AUTO_INCREMENT для таблицы `modx_site_templates`
 --
 ALTER TABLE `modx_site_templates`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT для таблицы `modx_site_tmplvars`

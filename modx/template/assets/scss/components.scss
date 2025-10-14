@@ -3,7 +3,20 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 10px 0;
+    padding: 5px;
+    width: max-content;
+    
+    &:after {
+        content: '';
+        width: 0;
+        height: 1px;
+        position: absolute;
+        background-color: var(--clr-main);
+        top: 100%;
+        left: 0;
+        opacity: 0.4;
+        transition: .2s all;
+    }
     
     .agree-click {
         cursor: pointer;
@@ -20,8 +33,11 @@
     }
     
     &:has(input[class="error"]) {
-        padding: 10px;
         background-color: #fff4f4;
+        
+        &:after {
+            width: 100%;
+        }
     }
     
     &.active {
