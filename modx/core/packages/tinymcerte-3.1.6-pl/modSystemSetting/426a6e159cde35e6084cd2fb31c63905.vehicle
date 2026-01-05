@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'tinymcerte',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '51a0ab89b6d660fa23da8a374e5f8b18',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '426a6e159cde35e6084cd2fb31c63905',
+  'native_key' => 'tinymcerte.modai.global.text.base_prompt',
+  'object' => '{"key":"tinymcerte.modai.global.text.base_prompt","value":"- This is not a conversation, do not include justifcation, suggestions, or explanation\\n- The output should be usable as is, without requiring editing or modification\\n- Format it with HTML markup so it will work in the TinyMCE rich text editor","xtype":"textarea","namespace":"tinymcerte","area":"modai","editedon":null}',
+);

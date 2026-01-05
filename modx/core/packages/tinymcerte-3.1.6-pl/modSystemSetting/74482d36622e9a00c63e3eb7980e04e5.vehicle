@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'tinymcerte',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'b4afe07d2bdd616216cf533177c8a1c6',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '74482d36622e9a00c63e3eb7980e04e5',
+  'native_key' => 'tinymcerte.insert_toolbar',
+  'object' => '{"key":"tinymcerte.insert_toolbar","value":"image media quicktable modxlink modai_generate","xtype":"textfield","namespace":"tinymcerte","area":"tinymcerte.toolbar","editedon":null}',
+);

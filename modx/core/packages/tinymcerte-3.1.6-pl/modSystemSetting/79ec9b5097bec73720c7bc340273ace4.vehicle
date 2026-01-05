@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'tinymcerte',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'eb6aaca5053a286642d016f221deafd0',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '79ec9b5097bec73720c7bc340273ace4',
+  'native_key' => 'tinymcerte.selection_toolbar',
+  'object' => '{"key":"tinymcerte.selection_toolbar","value":"bold italic underline | modxlink | modai_enhance","xtype":"textfield","namespace":"tinymcerte","area":"tinymcerte.toolbar","editedon":null}',
+);
