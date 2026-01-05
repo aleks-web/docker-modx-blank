@@ -21,11 +21,11 @@
     'object' => 
     array (
       'key' => 'tinymcerte.plugins',
-      'value' => 'autoresize advlist autolink lists charmap print preview anchor visualblocks searchreplace code fullscreen insertdatetime media table paste modxlink modximage modai',
+      'value' => 'autoresize advlist autolink lists charmap preview anchor visualblocks searchreplace code fullscreen insertdatetime media table modxlink modai quickbars image',
       'xtype' => 'textfield',
       'namespace' => 'tinymcerte',
       'area' => 'tinymcerte.default',
-      'editedon' => NULL,
+      'editedon' => '2025-06-19 06:01:53',
     ),
   ),
   'b8af1aae21a5f68a7889010662c2e730' => 
@@ -197,11 +197,11 @@
     'object' => 
     array (
       'key' => 'tinymcerte.skin',
-      'value' => 'modx',
+      'value' => 'oxide',
       'xtype' => 'textfield',
       'namespace' => 'tinymcerte',
       'area' => 'tinymcerte.default',
-      'editedon' => NULL,
+      'editedon' => '2025-06-19 06:01:53',
     ),
   ),
   '8bdeb00084802d84441feaf1375fd466' => 
@@ -284,6 +284,22 @@
       'editedon' => NULL,
     ),
   ),
+  'ef5dc0fa3649c0cc372a3b65540b8828' => 
+  array (
+    'criteria' => 
+    array (
+      'key' => 'tinymcerte.enable_link_aria',
+    ),
+    'object' => 
+    array (
+      'key' => 'tinymcerte.enable_link_aria',
+      'value' => '',
+      'xtype' => 'combo-boolean',
+      'namespace' => 'tinymcerte',
+      'area' => 'tinymcerte.default',
+      'editedon' => NULL,
+    ),
+  ),
   'af4c698960c752e26e815b5162e7734b' => 
   array (
     'criteria' => 
@@ -316,6 +332,54 @@
       'editedon' => NULL,
     ),
   ),
+  'b5ae30ddd9cea1e2d53d57d8d47c7ef0' => 
+  array (
+    'criteria' => 
+    array (
+      'key' => 'tinymcerte.min_height',
+    ),
+    'object' => 
+    array (
+      'key' => 'tinymcerte.min_height',
+      'value' => '100',
+      'xtype' => 'textfield',
+      'namespace' => 'tinymcerte',
+      'area' => 'tinymcerte.default',
+      'editedon' => NULL,
+    ),
+  ),
+  'da59ef4e35617c57854cbcefeb6505ff' => 
+  array (
+    'criteria' => 
+    array (
+      'key' => 'tinymcerte.insert_toolbar',
+    ),
+    'object' => 
+    array (
+      'key' => 'tinymcerte.insert_toolbar',
+      'value' => 'image media quicktable modxlink modai_generate',
+      'xtype' => 'textfield',
+      'namespace' => 'tinymcerte',
+      'area' => 'tinymcerte.toolbar',
+      'editedon' => NULL,
+    ),
+  ),
+  '2373388267786eba14ef64c81bb07f8a' => 
+  array (
+    'criteria' => 
+    array (
+      'key' => 'tinymcerte.selection_toolbar',
+    ),
+    'object' => 
+    array (
+      'key' => 'tinymcerte.selection_toolbar',
+      'value' => 'bold italic underline | modxlink | modai_enhance',
+      'xtype' => 'textfield',
+      'namespace' => 'tinymcerte',
+      'area' => 'tinymcerte.toolbar',
+      'editedon' => NULL,
+    ),
+  ),
   'cc58afe840bbe98e4a11b0115e1c73e7' => 
   array (
     'criteria' => 
@@ -325,11 +389,11 @@
     'object' => 
     array (
       'key' => 'tinymcerte.toolbar1',
-      'value' => 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | modai_generate modai_enhance',
+      'value' => 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | modxlink image | modai_generate modai_enhance',
       'xtype' => 'textfield',
       'namespace' => 'tinymcerte',
       'area' => 'tinymcerte.toolbar',
-      'editedon' => NULL,
+      'editedon' => '2025-06-19 06:01:53',
     ),
   ),
   'b5b516101e8982e562c1f37f2603ae64' => 
@@ -492,6 +556,38 @@
       'namespace' => 'tinymcerte',
       'area' => 'modai',
       'editedon' => NULL,
+    ),
+  ),
+  'afddf64c8f63a05f7be9ea078ceb188a' => 
+  array (
+    'criteria' => 
+    array (
+      'key' => 'tinymcerte.tiny_url',
+    ),
+    'object' => 
+    array (
+      'key' => 'tinymcerte.tiny_url',
+      'value' => '{tinymcerte.assets_url}mgr/tinymce/tinymce.min.js',
+      'xtype' => 'textfield',
+      'namespace' => 'tinymcerte',
+      'area' => 'tinymcerte.default',
+      'editedon' => NULL,
+    ),
+  ),
+  '6906622d20c4056c64b633b28977d593' => 
+  array (
+    'criteria' => 
+    array (
+      'key' => 'tinymcerte.lit',
+    ),
+    'object' => 
+    array (
+      'key' => 'tinymcerte.lit',
+      'value' => '1750312913',
+      'xtype' => 'textfield',
+      'namespace' => 'tinymcerte',
+      'area' => 'tinymcerte.default',
+      'editedon' => '2025-06-19 06:01:53',
     ),
   ),
   'c05e5724d3c0b1cab1a5daed6bca76b6' => 
