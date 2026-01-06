@@ -1,5 +1,5 @@
 .idea
 docker/mysql/volume
 modx/core/cache
-mxadmin/composer.lock
+modx/template/render_pages/*.html
 .data
