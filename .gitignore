@@ -2,6 +2,7 @@
 docker/mysql/volume
 modx/core/cache
 modx/assets/components/minifyx/cache
+modx/template/assets/css/output.css
 modx/template/render_pages/*.html
 .data
 node_modules
