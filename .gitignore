@@ -1,6 +1,7 @@
 .idea
 docker/mysql/volume
 modx/core/cache
+modx/assets/components/minifyx/cache
 modx/template/render_pages/*.html
 .data
 node_modules
