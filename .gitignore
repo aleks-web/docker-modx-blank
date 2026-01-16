@@ -3,3 +3,5 @@ docker/mysql/volume
 modx/core/cache
 modx/template/render_pages/*.html
 .data
+node_modules
+package-lock.json
