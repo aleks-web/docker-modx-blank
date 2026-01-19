@@ -47,7 +47,7 @@ admin | 123456789na
 
 ### phpMyAdmin
 phpMyAdmin [http://localhost:8090](http://localhost:8090)
-## Контакты Автора сборки
 
+## Контакты автора сборки
 - Telegram: [https://t.me/webalexey](https://t.me/webalexey)
 - GitHub: [https://github.com/aleks-web](https://github.com/aleks-web)
