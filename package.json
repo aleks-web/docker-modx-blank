@@ -8,6 +8,6 @@
     "docker-restart": "docker compose down && docker compose up -d --build",
     "bd-dump-import": "docker exec -i db_modx mysql -u root modx < modx.sql",
     "bd-dump-export": "docker exec -i db_modx mysqldump -u root modx > modx.sql",
-    "start": "npx @tailwindcss/cli -i ./modx/template/assets/css/input.css -o ./modx/template/assets/css/output.css --watch"
+    "tw": "npx @tailwindcss/cli -i ./modx/template/assets/css/input.css -o ./modx/template/assets/css/output.css --watch"
   }
 }
