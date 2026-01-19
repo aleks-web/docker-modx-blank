@@ -32,6 +32,7 @@ services:
             - ./modx:/var/www/modx
 
     db_modx:
+        container_name: db_modx
         image: mysql:5.7
         restart: always
         ports:
@@ -44,8 +45,11 @@ services:
             - docker-modx-network
         volumes:
             - ./docker/mysql/volume:/var/lib/mysql
+            - ./docker/mysql/my.cnf:/etc/mysql/my.cnf
+        
 
     phpmyadmin:
+        container_name: phpmyadmin
         depends_on:
             - db_modx
         image: phpmyadmin
