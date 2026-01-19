@@ -5,7 +5,7 @@
   },
   "type": "module",
   "scripts": {
-    "git": "git add . && git commit -m 'autocommit && git push origin main",
+    "git": "git add . && git commit -m 'autocommit && git push origin master",
     "docker-restart": "docker compose down && docker compose up -d --build",
     "bd-dump-import": "docker exec -i db_modx mysql -u root modx < modx.sql",
     "bd-dump-export": "docker exec -i db_modx mysqldump -u root modx > modx.sql",
